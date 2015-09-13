@@ -40,3 +40,11 @@
 |	"Run All Unit Tests" > To run all unit tests located in "phpunit.xml" > <directory suffix=".php">./Test/</directory>
 |
 */
+
+// PHPUnit Can test simple procedural PHP program
+function add($x, $y){
+return $x+$y;
+}
+
+
+?>
