@@ -7,8 +7,11 @@
 | 1. Create "composer.json" into your working directory, for mine "htdocs\xdb"
 |	
 |	{
-|		"require"     : { },
-|		"require-dev" : { "phpunit/phpunit": "*" }
+|    "require"     : { },
+|    "require-dev" : { "phpunit/phpunit": "*" },
+|    "autoload"	   : {
+|        			           "psr-0": { "xdb": "" }
+|    				            }
 |	}
 |
 | 2. Then in "cmd" goto "htdocs\xdb" directory where your "composer.json" file is and type 
