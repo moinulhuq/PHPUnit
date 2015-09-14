@@ -1,6 +1,6 @@
 <?php
 
-class Simple1Test extends \PHPUnit_Framework_TestCase
+class Simple1Test extends PHPUnit_Framework_TestCase
 {
 
     public function testadd() {    	
