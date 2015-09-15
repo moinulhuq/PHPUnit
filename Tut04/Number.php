@@ -10,10 +10,13 @@ class Number{
 	public $Number;
 	public $Arr;
 	
-	public function __construct($Number){
-			$this->Number = $Number;
+	public function __construct(){			
 			$this->setArr();
 	}
+
+	public function setNumber($Number){
+			$this->Number = $Number;
+	}	
 
 	public function getNumber(){
 			return $this->Number;
