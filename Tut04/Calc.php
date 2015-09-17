@@ -15,7 +15,7 @@ class Calc{
 
 	public function AvgCal($a, $b){
 
-			if($b!=0 and is_numeric($b))
+			if($b!=0 and is_numeric($b) and $a!=0 and is_numeric($a))
 				$this->result = (int)$a/(int)$b;
 			else
 				$this->result = "input can not be Zero or String";
