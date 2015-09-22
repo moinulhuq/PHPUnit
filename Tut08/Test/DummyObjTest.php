@@ -40,7 +40,8 @@ class DummyObjTest extends PHPUnit_Framework_TestCase
         //$bar = $this->getMock('Bar'); // (or)
         $bar = $this->getMockBuilder('Bar')
                     ->getMock(); 
-
+        /*Our dummy object in this test is the bar object*/
+        
         $baz = new Baz($foo, $bar);
 
         $this->assertEquals(1, $baz->processFoo());
@@ -49,7 +50,8 @@ class DummyObjTest extends PHPUnit_Framework_TestCase
     public function testmergeBar(){
         $foo = $this->getMockBuilder('Foo')
                     ->getMock(); 
-
+        /*Our dummy object in this test is the Foo object*/            
+        
         $bar = $this->getMockBuilder('Bar')
                     ->setMethods(array('getStatus', 'merge'))        
                     ->getMock(); 
