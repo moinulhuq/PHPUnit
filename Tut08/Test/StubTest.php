@@ -1,14 +1,17 @@
 <?php
 /*
 |--------------------------------------------------------------------------
-| Stub
+| Stub - Skeleton
 |--------------------------------------------------------------------------
-| When a test double is supposed to return some fixed values, you need a stub. The characteristics of a stub are:
+| $foo = $this->getMock('Foo', array('process')); 
+|   (or)
+| $foo = $this->getMockBuilder('Foo')
+|             ->setMethods(array('process'))
+|              ->getMock(); 
 | 
-| -> It doesn't matter which arguments are provided and when one of its methods is called.
-|       * No list of required arguments need to provide (using ->with(...))
-| -> It doesn't matter how many times a method is called.
-|       * $this->any() indicate that there is no limit of calling this method and it will always return same value.
+| $foo->expects($this->any())
+|     ->method('process')
+|     ->will($this->returnValue(1));
 |
 */
 
