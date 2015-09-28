@@ -1,11 +1,14 @@
 <?php
 /*
 |--------------------------------------------------------------------------
-| Spy
+| Spy - Skeleton
 |--------------------------------------------------------------------------
-| If you want to keep track of method calls being made to a test double, you should use a spy.
-| 
-| -> Difference between a test spy and a test stub is that you’re not concerned with testing return values.
+| $Obj = $this->getMockBuilder('Obj')
+|             ->setMethods(array('process'))
+|             ->getMock();    
+|
+|         $Obj->expects($this->exactly(3))
+|            ->method('process');
 |
 */
 
