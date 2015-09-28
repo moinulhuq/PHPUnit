@@ -15,7 +15,7 @@
 |
 */
 
-require_once(realpath(__DIR__.'/../Baz.php'));
+require_once(realpath(__DIR__.'/../Stub.php'));
 
 class StubTest extends PHPUnit_Framework_TestCase
 { 
