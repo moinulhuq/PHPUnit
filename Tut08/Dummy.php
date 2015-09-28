@@ -1,19 +1,19 @@
 <?php
 /*
 |--------------------------------------------------------------------------
-| Dummy Objects
+| Dummy
 |--------------------------------------------------------------------------
 | Dummy objects are objects that the System Under Test (SUT) depends on, but they are actually never used. A dummy object 
 | can be an argument passed to another object, or it can be returned by a second object and then passed to a third object.
 |
-| Below "Baz" class take two class "foo" and "bar". 
+| Below "Dummy" class take two class "foo" and "bar". 
 | -> foo has one function 
 |		foo->process()
 | -> bar has two function 
 |		bar->getStatus()
 |		bar->merge()
 |
-| Here we want to test "processFoo()" and "mergeBar()" methods of "Baz" class.
+| Here we want to test "processFoo()" and "mergeBar()" methods of "Dummy" class.
 |
 */
 
