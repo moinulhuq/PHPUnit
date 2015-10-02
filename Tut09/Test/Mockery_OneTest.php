@@ -7,7 +7,7 @@
 
 require_once(realpath(__DIR__.'/../vendor/autoload.php'));
 
-require_once(realpath(__DIR__.'/../Mock.php'));
+require_once(realpath(__DIR__.'/../Mockery_One.php'));
 
 class MockeryVersusPHPUnitGetMockTest extends PHPUnit_Framework_TestCase {
  
