@@ -57,23 +57,14 @@
 | </phpunit>
 | 
 | 07. After all of this Run this file using PHPUnit command and make sure this file should be under "Test" directory of your project root. 
-|     for mine. "C:\xampp\htdocs\xdb\Test\MockeryTest.php".
+|     for mine. "C:\xampp\htdocs\xdb\Test\MockeryTest.php" and main file under root directory 
+|     "C:\xampp\htdocs\xdb\Mockery.php".
 | 
 */
 
 require_once(realpath(__DIR__.'/../vendor/autoload.php'));
 
 require_once(realpath(__DIR__.'/../Mockery.php'));
-
-class AClassToBeMocked {
-
-}
-
-class AClassToWorkWith {
-    function doSomethingWit($anotherClass) {
-        return $anotherClass->someMethod();
-    }
-}
 
 class JustToCheckMockeryTest extends PHPUnit_Framework_TestCase {
  
