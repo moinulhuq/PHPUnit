@@ -11,7 +11,8 @@
 */
 
 class AClassToBeMocked {
-
+    function someMethod(){
+    }
 }
 
 class AClassToWorkWith {
