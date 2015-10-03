@@ -14,7 +14,13 @@ class MockeryVersusPHPUnitGetMockTest extends PHPUnit_Framework_TestCase {
     protected function tearDown() {
         \Mockery::close();
     }
- 
+
+    public function testSimpleMocks()
+    {
+        $user = Mockery::mock('AClassToBeMocked', array('someMethod'=>1));
+        $user->someMethod(); // Print "1"
+    }
+
     //Simple Return Values
     function testSimpleReturnValue() {
         $someObject = new SomeClass();
@@ -24,8 +30,7 @@ class MockeryVersusPHPUnitGetMockTest extends PHPUnit_Framework_TestCase {
         $phpunitMock->expects($this->once())->method('someMethod')->will($this->returnValue('some value'));
         // Expect the returned value
         $this->assertEquals('some value', $someObject->doSomething($phpunitMock));
- 
- 
+
         // With Mockery
         $mockeryMock = \Mockery::mock('AnInexistentClass');
         $mockeryMock->shouldReceive('someMethod')->once()->andReturn('some value');
@@ -44,7 +49,6 @@ class MockeryVersusPHPUnitGetMockTest extends PHPUnit_Framework_TestCase {
         $someObject->doSomething($phpunitMock);
         $someObject->doSomething($phpunitMock);
 
-     
         // With Mockery 2 times
         $mockeryMock = \Mockery::mock('AnInexistentClass');
         $mockeryMock->shouldReceive('someMethod')->twice();
@@ -71,7 +75,6 @@ class MockeryVersusPHPUnitGetMockTest extends PHPUnit_Framework_TestCase {
         $phpunitMock->expects($this->at(1))->method('someMethod')->will($this->returnValue('Second value'));
         $phpunitMock->expects($this->at(2))->method('someMethod')->will($this->returnValue('Third value'));
         $phpunitMock->expects($this->at(3))->method('someMethod')->will($this->returnValue('Fourth value'));
-        
 
         // Expect the returned value
         $this->assertEquals('First value', $someObject->doSomething($phpunitMock));
