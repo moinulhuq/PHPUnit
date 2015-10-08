@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="studentdb">
+	<table_data name="studenttbl">
+	<row>
+		<field name="id">1</field>
+		<field name="name">Moin</field>
+		<field name="major">Science</field>
+		<field name="grade">A+</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="name">Tanim</field>
+		<field name="major">Commerce</field>
+		<field name="grade">B+</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="name">Shajib</field>
+		<field name="major">Arts</field>
+		<field name="grade">C+</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>
